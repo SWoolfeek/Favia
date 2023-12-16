@@ -68,7 +68,7 @@ $('.input-number').on('change', function () {
     }
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
-  	console.log('work - 113')
+  	console.log('work - 1123')
     const parentId = $(this).attr('parent-depend-id')
     console.log('Parent Id - ' + parentId)
     //console.log(parentId !== parentId)
@@ -78,7 +78,7 @@ $('.input-number').on('change', function () {
   	if (parentId){
       console.log('work - 2')
       const $parent = $('#' + parentId); // Replace with your actual element ID
-      const parentValue = parseInt($parent.value, 10);
+      const parentValue = parseInt($parent.val(), 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (parentValue < (newValue - dependStep)){
         $(this).val(parentValue);
@@ -86,13 +86,13 @@ $('.input-number').on('change', function () {
     }
   }
   else if (newValue < parseInt($(this).data('previousValue'), 10)){
-  	console.log('work113')
+  	console.log('work1123')
     const childId = $(this).attr('child-depend-id')
   	if (childId){
       console.log('work2')
       const $child = $('#' + childId); // Replace with your actual element ID
-      console.log('Child value - ' + childId)
-      const childValue = parseInt($child.value, 10);
+      console.log('Child value - ' + $child.val())
+      const childValue = parseInt($child.val(), 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
         $child.value(newValue);
