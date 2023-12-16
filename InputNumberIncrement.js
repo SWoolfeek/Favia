@@ -69,10 +69,11 @@ $('.input-number').on('change', function () {
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
   	console.log('work - 1')
-    const parentId = parseFloat($(this).attr('parent-depend-id'))
-    console.log('Parent Id - ' + parentId)
-    console.log('is string isNaN - ' + isNaN(parseFloat(NaN)))
-  	if (!isNaN(parentId)){
+    //const parentId = parseFloat($(this).attr('parent-depend-id'))
+    const parentId = NaN
+    //console.log('Parent Id - ' + parentId)
+    //console.log('is string isNaN - ' + isNaN(parseFloat(NaN)))
+  	if (parentId !== parentId){
       console.log('work - 2')
       const $parent = $('#' + $(this).attr('parent-depend-id')); // Replace with your actual element ID
       const parentValue = parseInt($parent.value, 10);
