@@ -69,8 +69,8 @@ $('.input-number').on('change', function () {
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
   	console.log('work - 1')
-    //const parentId = $(this).attr('parent-depend-id')
-  	if (!isNaN($(this).attr('parent-depend-id'))){
+    const parentId = $(this).attr('parent-depend-id')
+  	if (!isNaN(parentId)){
       console.log('work - 2')
       const $parent = $('#' + $(this).attr('parent-depend-id')); // Replace with your actual element ID
       const parentValue = parseInt($parent.value, 10);
