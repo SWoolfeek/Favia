@@ -30,7 +30,8 @@ $('.input-number-increment').click(function () {
   const step = parseInt(checkForNan($input.attr('step'), stepFallback), 10);
 
 	$input.data('previousValue', $input.val())
-  $input.val(val + step).trigger('change');
+  // +1 only for check is it work dynamicly
+  $input.val(val + step + 1).trigger('change');
 });
 
 $('.input-number-decrement').click(function () {
