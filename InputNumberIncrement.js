@@ -90,6 +90,7 @@ $('.input-number').on('change', function () {
     const childId = parseFloat($(this).attr('child-depend-id'))
   	if (childId !== childId){
       const $child = $('#' + childId); // Replace with your actual element ID
+      console.log($child.val())
       const childValue = parseInt($child.value, 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
