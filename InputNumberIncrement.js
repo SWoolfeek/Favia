@@ -30,8 +30,7 @@ $('.input-number-increment').click(function () {
   const step = parseInt(checkForNan($input.attr('step'), stepFallback), 10);
 
 	$input.data('previousValue', $input.val())
-  // +1 only for check is it work dynamicly
-  $input.val(val + step + 1).trigger('change');
+  $input.val(val + step).trigger('change');
 });
 
 $('.input-number-decrement').click(function () {
@@ -69,8 +68,10 @@ $('.input-number').on('change', function () {
     }
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
-  	console.log('work1')
+  	console.log('work - 1')
+    //const parentId = $(this).attr('parent-depend-id')
   	if (!isNaN($(this).attr('parent-depend-id'))){
+      console.log('work - 2')
       const $parent = $('#' + $(this).attr('parent-depend-id')); // Replace with your actual element ID
       const parentValue = parseInt($parent.value, 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
@@ -87,7 +88,6 @@ $('.input-number').on('change', function () {
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
         $child.value(newValue);
-        //$dependElement.value(newValue - 1);
     	}
     }
   }
