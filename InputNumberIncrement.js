@@ -68,7 +68,7 @@ $('.input-number').on('change', function () {
     }
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
-  	console.log('work - 11213')
+  	console.log('work - 1')
     const parentId = $(this).attr('parent-depend-id')
     //console.log(parentId !== parentId)
     //const nanCheck = NaN
@@ -80,12 +80,12 @@ $('.input-number').on('change', function () {
       const parentValue = parseInt($parent.val(), 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (parentValue < (newValue + dependStep)){
-        $(this).val(parentValue);
+        $(this).val(parentValue - dependStep);
     	}
     }
   }
   else if (newValue < parseInt($(this).data('previousValue'), 10)){
-  	console.log('work11213')
+  	console.log('work1')
     const childId = $(this).attr('child-depend-id')
   	if (childId){
       console.log('work2')
@@ -94,7 +94,7 @@ $('.input-number').on('change', function () {
       const childValue = parseInt($child.val(), 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
-        $child.val(newValue);
+        $child.val(newValue- dependStep);
     	}
     }
   }
