@@ -4,7 +4,6 @@ const dependStepFallback = '0'
 
 function checkForNan(value, basevalue) {
   if (isNaN(value) || value == '') {
-      console.log('initialvalue - ' + basevalue)
     return basevalue
   }
   else {
@@ -49,8 +48,6 @@ $('.input-number').on('change', function () {
   const newValue = parseInt($(this).val(), 10);
   const minvalue = parseInt($(this).attr('min-value'), 10);
   const maxvalue = parseInt($(this).attr('max-value'), 10);
-  
-  console.log('previous value - ' +  $(this).data('previousValue'))
   
   if (newValue < minvalue) {
     $(this).val(minvalue);
