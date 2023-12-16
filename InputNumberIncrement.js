@@ -91,7 +91,7 @@ $('.input-number').on('change', function () {
   	if (childId !== childId){
       console.log('work2')
       const $child = $('#' + childId); // Replace with your actual element ID
-      console.log('Child value - ' + $child.val())
+      console.log('Child value - ' + childId)
       const childValue = parseInt($child.value, 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
