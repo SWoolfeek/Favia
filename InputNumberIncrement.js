@@ -1,4 +1,4 @@
-<script>
+
 const stepFallback = '1'
 const initialValueFallback = '0'
 const dependStepFallback = '0'
@@ -98,4 +98,3 @@ $('input').on('focusin', function(){
 	$(this).data('previousValue', $(this).val());
 });
 
-</script>
