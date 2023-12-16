@@ -69,7 +69,7 @@ $('.input-number').on('change', function () {
   }
   else if (newValue > parseInt($(this).data('previousValue'), 10)){
   	console.log('work - 1')
-    const parentId = $(this).attr('parent-depend-id')
+    const parentId = parseFloat($(this).attr('parent-depend-id'))
     console.log('Parent Id - ' + parentId)
     console.log('is string isNaN - ' + isNaN('id'))
   	if (!isNaN(NaN)){
