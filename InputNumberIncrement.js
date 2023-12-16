@@ -1,4 +1,3 @@
-
 const stepFallback = '1'
 const initialValueFallback = '0'
 const dependStepFallback = '0'
@@ -30,7 +29,7 @@ $('.input-number-increment').click(function () {
   const step = parseInt(checkForNan($input.attr('step'), stepFallback), 10);
 
 	$input.data('previousValue', $input.val())
-  $input.val(val + step).trigger('change');
+  $input.val(val + step + 1).trigger('change');
 });
 
 $('.input-number-decrement').click(function () {
@@ -41,7 +40,7 @@ $('.input-number-decrement').click(function () {
   const step = parseInt(checkForNan($input.attr('step'), stepFallback), 10);
 
 	$input.data('previousValue', $input.val())
-  $input.val(val - step).trigger('change');
+  $input.val(val - step - 1).trigger('change');
 })
 
 //Check if field was modified by hands.
