@@ -71,7 +71,7 @@ $('.input-number').on('change', function () {
   	console.log('work - 1')
     const parentId = parseFloat($(this).attr('parent-depend-id'))
     console.log('Parent Id - ' + parentId)
-    console.log(parentId !== parentId)
+    //console.log(parentId !== parentId)
     //const nanCheck = NaN
     //console.log('Nancheck - ' + NaN)
     //console.log(nanCheck == nanCheck)
@@ -90,7 +90,7 @@ $('.input-number').on('change', function () {
     const childId = parseFloat($(this).attr('child-depend-id'))
   	if (childId !== childId){
       const $child = $('#' + childId); // Replace with your actual element ID
-      const childValue = parseInt($parent.value, 10);
+      const childValue = parseInt($child.value, 10);
       const dependStep = parseInt(checkForNan($(this).attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)){
         $child.value(newValue);
