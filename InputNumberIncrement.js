@@ -85,6 +85,7 @@ $('.input-number').on('change', function () {
       const dependStep = parseInt(checkForNan($child.attr('depend-step'), dependStepFallback), 10);
       if (childValue > (newValue - dependStep)) {
         $child.val(newValue - dependStep);
+        $child[0].dispatchEvent(new Event('input'));
       }
     }
   }
