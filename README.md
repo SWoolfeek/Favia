@@ -3,9 +3,9 @@
   
   ### Для создания элемента должна быть следующуя иерархия:
   1. Div со стилем "input-number-group" (парент)
-     -Input field со стилем "input-number"
-     -Div со стилем "input-number-decrement"
-     -Div со стилем "input-number-increment"
+     - Input field со стилем "input-number"
+     - Div со стилем "input-number-decrement"
+     - Div со стилем "input-number-increment"
   
   ### Для Input field можно добавить следующие атрибуты:
     Базовое:<br>
