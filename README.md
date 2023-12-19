@@ -2,10 +2,10 @@
   Кастомный елемент input с кнопками по бокам для увеличения значений
   
   ### Для создания элемента должна быть следующуя иерархия:
-  -Div со стилем "input-number-group" (парент)<br>
-     -Input field со стилем "input-number"<br>
-     -Div со стилем "input-number-decrement"<br>
-     -Div со стилем "input-number-increment"<br>
+  1. Div со стилем "input-number-group" (парент)
+     -Input field со стилем "input-number"
+     -Div со стилем "input-number-decrement"
+     -Div со стилем "input-number-increment"
   
   ### Для Input field можно добавить следующие атрибуты:
     Базовое:<br>
