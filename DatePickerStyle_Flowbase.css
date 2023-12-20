@@ -31,7 +31,7 @@ you can just add like red, or blue or any helx you like! */
 .datepicker-panel>ul[data-view="week"]>li:hover {
     background-color: var(--main-light-color);
     color: var(--main-dark-color);
-    border-radius: 0px;
+    border-radius: 30px;
 }
 
 .datepicker-panel>ul[data-view="week"] li:first-child {
