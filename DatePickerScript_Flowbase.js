@@ -1,18 +1,12 @@
-$(document).ready(function () {
-    $('[data-toggle="datepicker"]').datepicker({
-        format: 'mm-dd-yyyy'
-    });
-    if ($(this).attr('multiple-choice')){
-        console.log('multiple-choice ' + $(this).attr('multiple-choice'))
-    }
-    else{
-        console.log('multiple-choice None')
-    }
-    // Available date placeholders:
-    // Year: yyyy
-    // Month: mm
-    // Day: dd
-    if (window.innerWidth < 768) {
-        $('[data-toggle="datepicker"]').attr('readonly', 'readonly')
-    }
-});
+var mindate = new Date();
+mindate.setDate(mindate.getDate() - 8);
+var maxdate = new Date();
+maxdate.setDate(maxdate.getDate() - 1);
+$('.date-picker').datepicker({
+    language: 'en',
+    range : true,
+    minDate : mindate,
+    maxDate : maxdate,
+    multipleDates: true,
+    multipleDatesSeparator: " - "
+})

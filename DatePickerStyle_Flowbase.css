@@ -1,121 +1,77 @@
-/* You can apply your own color! 
---main-light-color is the light grey, 
---main-dark-color is the text
---main-active-color is the highlight
-you can just add like red, or blue or any helx you like! */
-:root {
-    --main-light-color: #f3f5fb;
-    --main-dark-color: #321f59;
-    --main-active-color: #642eff;
+body{
+	font-family: 'Exo 2', sans-serif;
+	background-color: #f8ceec;
+	height: 100%;
 }
-
-.datepicker-dropdown {
-    border-radius: 30px !important;
-    border: 0 !important;
-    -webkit-box-shadow: 0px 48px 88px rgba(23, 9, 54, 0.08);
-    box-shadow: 0px 48px 88px rgba(23, 9, 54, 0.08);
-    box-sizing: border-box;
+.container{
+	max-width: 600px;
 }
-
-.datepicker-panel>ul[data-view="week"]>li {
-    background-color: var(--main-light-color);
-    color: var(--main-dark-color);
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    height: initial;
-    padding-top: 3px;
-    margin-bottom: 4px;
+.box{
+	padding: 50px;
+	background: #ffffff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
-
-.datepicker-panel>ul[data-view="week"]>li:hover {
-    background-color: var(--main-light-color);
-    color: var(--main-dark-color);
-    border-radius: 30px;
+.box h3{
+	text-align: center;
+	padding: 0 0 30px 0;
 }
-
-.datepicker-panel>ul[data-view="week"] li:first-child {
-    border-radius: 20px 0 0 20px;
+.box .form-control{
+	max-width: 300px;
+	margin: 0 auto;	
 }
-
-.datepicker-panel>ul[data-view="week"] li:last-child {
-    border-radius: 0 20px 20px 0;
+.datepicker{
+	font-family: 'Exo 2', sans-serif;
 }
-
-.datepicker-top-left::before,
-.datepicker-top-left::after {
-    display: none;
+.datepicker--cell.-range-to-{
+	background: rgba(248, 206, 236, 0.4);
+	border-color: rgba(248, 206, 236, 1);
 }
-
-.datepicker-panel>ul>li.picked,
-.datepicker-panel>ul>li.highlighted,
-.datepicker-panel>ul>li.picked:hover {
-    color: var(--main-active-color);
-    background: var(--main-light-color);
-    border-radius: 8px;
-    font-style: normal;
+.datepicker--cell.-current-{}
+.datepicker--cell.-selected-,.datepicker--cell.-selected-.-focus-{
+	background-color: #f8ceec;
+	color: #000000;
+}
+.datepicker--cell.-in-range-{
+	background: rgba(248, 206, 236, 0.2);
+}
+.datepicker--cell-day {
     font-weight: 500;
-    font-size: 14px;
+    color: #000000;
 }
 
-li[data-view="month current"],
-li[data-view="year current"] {
-    text-align: left;
-    color: var(--main-dark-color);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    /* line-height: 24px; */
-    padding-left: 15px;
-    border-radius: 10px;
+.form-control{
+	height: 50px;
+	font-size: 16px;
+	color: #414D64;
+	background: #ffffff;
+	padding: 0 15px;
+	border: 2px solid #DADEEA;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
 }
-
-.datepicker-panel>ul>li:hover {
-    background: var(--main-light-color);
-    border-radius: 10px;
+textarea.form-control{
+	height: 120px;
+	padding-top: 15px;
 }
-
-li[data-view="month current"],
-li[data-view="year current"],
-li[data-view="years current"] {
-    margin-bottom: 4px !important;
+.form-control-plaintext{
+	font-size: 18px;
+	color: #434343;
 }
-
-@media screen and (min-width: 768px) {
-    .datepicker-dropdown {
-        width: 364px;
-        padding: 12px;
-    }
-
-    .datepicker-panel>ul>li {
-        width: 48px;
-        height: 48px;
-        padding-top: 10px;
-    }
-
-    li[data-view="month next"],
-    li[data-view="year next"],
-    li[data-view="years next"] {
-        position: absolute;
-        right: 18px
-    }
-
-    li[data-view="month prev"],
-    li[data-view="year prev"],
-    li[data-view="years prev"] {
-        position: absolute;
-        right: 66px
-    }
-
-    ul[data-view="months"] li,
-    ul[data-view="years"] li {
-        padding-top: 0px;
-        width: 57px !important;
-    }
+button.form-control{
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
-
-@media screen and (max-width: 768px) {
-    .datepicker-panel {
-        transform: scale(0.97);
-    }
+.form-control:focus{
+	border-color: #37B448;
+	-webkit-box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
+	-moz-box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
+	box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
 }
