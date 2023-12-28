@@ -1,14 +1,12 @@
-$(document).ready(function () {  
-   var mindate = new Date();
-    mindate.setDate(mindate.getDate() - 8);
-    var maxdate = new Date();
-    maxdate.setDate(maxdate.getDate() - 1);
-    $('#minMaxExample').datepicker({
-        language: 'en',
-        range : true,
-        minDate : mindate,
-        maxDate : maxdate,
-        multipleDates: true,
-        multipleDatesSeparator: " - "
-    })
+$(document).ready(function () {
+    $('[data-toggle="datepicker"]').datepicker({
+        format: 'mm-dd-yyyy'
+    });
+    // Available date placeholders:
+    // Year: yyyy
+    // Month: mm
+    // Day: dd
+    if (window.innerWidth < 768) {
+        $('[data-toggle="datepicker"]').attr('readonly', 'readonly')
+    }
 });
