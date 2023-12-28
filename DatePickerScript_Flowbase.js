@@ -6,7 +6,6 @@ $(document).ready(function () {
     // Year: yyyy
     // Month: mm
     // Day: dd
-    if (window.innerWidth < 768) {
-        $('[data-toggle="datepicker"]').attr('readonly', 'readonly')
-    }
+    
+    $('[data-toggle="datepicker"]').attr('readonly', 'readonly')
 });
