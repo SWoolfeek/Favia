@@ -3,23 +3,20 @@
 --main-dark-color is the text
 --main-active-color is the highlight
 you can just add like red, or blue or any helx you like! */
-:root {
-	--main-light-color: #f3f5fb;
-	--main-dark-color: #321f59;
-	--main-active-color: #642eff;
-}
+
 
 .datepicker-dropdown {
-	border-radius: 8px !important;
+	border-radius: 30px !important;
 	border: 0 !important;
 	-webkit-box-shadow: 0px 48px 88px rgba(23, 9, 54, 0.08);
-	box-shadow: 0px 48px 88px rgba(23, 9, 54, 0.08);
+	box-shadow: 6px 6px 9px var(--main-shadow);
 	box-sizing: border-box;
+	background-color: var(--main-white);
 }
 
 .datepicker-panel>ul[data-view="week"]>li {
-	background-color: var(--main-light-color);
-	color: var(--main-dark-color);
+	background-color: var(--light-grey);
+	color: var(--text-main-color);
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0;
@@ -29,8 +26,8 @@ you can just add like red, or blue or any helx you like! */
 }
 
 .datepicker-panel>ul[data-view="week"]>li:hover {
-	background-color: var(--main-light-color);
-	color: var(--main-dark-color);
+	background-color: var(--light-grey);
+	color: var(--text-main-color);
 	border-radius: 0px;
 }
 
@@ -50,18 +47,27 @@ you can just add like red, or blue or any helx you like! */
 .datepicker-panel>ul>li.picked,
 .datepicker-panel>ul>li.highlighted,
 .datepicker-panel>ul>li.picked:hover {
-	color: var(--main-active-color);
-	background: var(--main-light-color);
-	border-radius: 8px;
+	color: var(--text-main-color);
+	border-radius: 16px;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
 }
 
+.datepicker-panel>ul>li.picked,
+.datepicker-panel>ul>li.picked:hover {
+	background-color: var(--success-color) !important;;
+}
+
+.datepicker-panel>ul>li.highlighted{
+	background-color: var(--light-grey);
+}
+
+
 li[data-view="month current"],
 li[data-view="year current"] {
 	text-align: left;
-	color: var(--main-dark-color);
+	color: var(--text-main-color);
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
@@ -71,7 +77,7 @@ li[data-view="year current"] {
 }
 
 .datepicker-panel>ul>li:hover {
-	background: var(--main-light-color);
+	background: var(--light-grey);
 	border-radius: 10px;
 }
 
@@ -91,6 +97,7 @@ li[data-view="years current"] {
 		width: 48px;
 		height: 48px;
 		padding-top: 10px;
+		background-color: var(--main-white);
 	}
 
 	li[data-view="month next"],
